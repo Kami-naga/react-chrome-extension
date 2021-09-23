@@ -24,9 +24,6 @@
       "matches": [
         "<all_urls>"
       ],
-      "css": [
-        "static/css/content.css"
-      ],
       "js": [
         "static/js/content.js"
       ],
