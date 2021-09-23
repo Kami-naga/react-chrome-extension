@@ -1,4 +1,5 @@
 import axios from 'axios'
+//if you no longer need mock,comment the line below
 import '@/mock'
 
 // server address

@@ -1,17 +1,27 @@
 import React from 'react'
 import { Button, Input } from 'antd'
-import carrot from './turtle.svg'
+import turtle from './turtle.svg'
 import './login.styl'
+import { apiReqs } from '@/api'
 
 function Login(props) {
 
     const login = () => {
-       props.history.push('/home')
+        apiReqs.signIn({
+            success: (res) => {
+                console.log(res)
+                alert(res.data.nickname)
+                props.history.push('/home')
+            },
+            fail: (res) => {
+                alert(res)
+            }
+        })
     }
 
     return (
         <div className="P-login">
-            <img src={carrot} alt="" className="carrot" />
+            <img src={turtle} alt="" className="turtle" />
             <div className="login-con">
                 <div className="ipt-con">
                     <Input
@@ -25,7 +35,7 @@ function Login(props) {
                         size="large"
                     />
                 </div>
-                <Button type="primary" size="large" onClick={login}>登录</Button>
+                <Button type="primary" size="large" onClick={login}>login</Button>
             </div>
         </div>
     );

@@ -6,7 +6,7 @@ import './popup.styl'
 //the debugging of the content script is just a pain(rebuild & crx reload),
 // so just add it into popup page and debug it at localhost
 //if you have content script, uncomment the following line
-import '@/content'
+//import '@/content'
 
 function Popup() {
     return (
