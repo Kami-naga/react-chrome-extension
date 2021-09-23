@@ -3,7 +3,10 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Login from './pages/login'
 import Home from './pages/home'
 import './popup.styl'
-// import '@/content'
+//the debugging of the content script is just a pain(rebuild & crx reload),
+// so just add it into popup page and debug it at localhost
+//if you have content script, uncomment the following line
+import '@/content'
 
 function Popup() {
     return (
